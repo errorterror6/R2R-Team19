@@ -58,7 +58,7 @@ void setup() {
 void loop() {
   // Retrieve sensor information
 
-  //TO DO: get sensor information and store distance(cm) as front,left,right
+  //TO DO RAY: get sensor information and store distance(cm) as front,left,right
 
   // Print sensor information
 
@@ -66,7 +66,7 @@ void loop() {
 
   // Look for user input
 
-  //TO DO: write code to receive user input.
+  //TO DO ALEX: write code to receive user input.
 
   // Output motor controls
 
@@ -99,15 +99,15 @@ void initialise_sensors(){
 }
 
 void initialise_motors(){
-  //TO DO: initialise motor pins
+  //TO DO MARTIN: initialise motor pins
 }
 
 void sensor_print(int front, int left, int right){
-  //TO DO: print the output. front = front distance(cm), left = left distance etc.
+  //TO DO ALEX: print the output. front = front distance(cm), left = left distance etc.
 }
 
 void motor_control(char instruction){
-  //TO DO: given instruction (WASD, 012345), control the motors.
+  //TO DO MARTIN: given instruction (WASD, 012345), control the motors.
 }
 
 
