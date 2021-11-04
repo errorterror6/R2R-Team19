@@ -40,7 +40,7 @@ void setup() {
         } else if (incomingByte == '2'){
           int i = 0;
         } else if (incomingByte == '3'){
-          exit(0)
+          exit(0);
         } else {
           Serial.println("Unrecognised instruction. Please enter 1 to open instructions, 2 to finish initialisation, 3 to end the program. ");
         }
@@ -76,8 +76,9 @@ void loop() {
   sensor_print(front, left, right);
 
   // Look for user input
+  
 
-  //TO DO ALEX: write code to receive user input. output as char instruction. should expect WASDQE 012345. else, return no instruction.
+  //TO DO ALEX: write code to receive user input. output as char instruction. should expect WASDQE 012345. else, return no instruction. must also initialise char instruction.
 
   // Output motor controls
 
