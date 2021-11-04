@@ -1,7 +1,7 @@
-#define echoPin   1
-#define frontTrig 2
-#define leftTrig  4
-#define rightTrig 7
+#define trigPin   1
+#define frontEcho 2
+#define leftEcho  4
+#define rightEcho 7
 
 #define rightMLP1 5
 #define rightMLP2 6
@@ -9,10 +9,14 @@
 #define leftMLP2  10
 
 void instructions();
+void initialise_sensors();
+void initialise_motors();
+void sensor_print(int front, int left, int right);
+void motor_control(char instruction);
 
 
 void setup() {
-  Serial.begin(9600)
+  Serial.begin(9600)                  //begin Serial Communication
   // UI Features, e.g. instructions
 
   Serial.println("-------------------------------------");
@@ -42,13 +46,9 @@ void setup() {
   
 
   // Motor initialisation
-
-
-
+  initialise_motors();
   // Sensor initialisation
-
-
-
+  initialise_sensors();
   //confirmation of initialisation
   Serial.println("Initialisation Complete.");
   
@@ -57,17 +57,19 @@ void setup() {
 
 void loop() {
   // Retrieve sensor information
-
+  
 
   // Print sensor information
 
-
+  sensor_print(front, left, right);
 
   // Look for user input
 
 
 
   // Output motor controls
+
+  motor_control(instruction);
 
 }
 
@@ -85,4 +87,26 @@ void instructions() {
   Serial.println("press 0 - 5 for speed");
   Serial.println("0(stopped) ----- 5(full speed)");
 }
+
+
+//instructions to initialise sensors
+void initialise_sensors(){
+  pinMode(trigPin, OUTPUT); // Sets the TrigPin as an OUTPUT
+  pinMode(frontEcho, INPUT); // Sets the front echoPin as an INPUT
+  pinMode(leftEcho, INPUT); // Sets the left echoPin as an INPUT
+  pinMode(rightEcho, INPUT); // Sets the right echoPin as an INPUT
+}
+
+void initialise_motors(){
+  
+}
+
+void sensor_print(int front, int left, int right){
+  
+}
+
+void motor_control(char instruction){
+  
+}
+
 
