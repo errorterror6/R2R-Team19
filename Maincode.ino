@@ -49,7 +49,8 @@ void setup() {
 
 
 
-
+  //confirmation of initialisation
+  Serial.println("Initialisation Complete.");
   
 
 }
