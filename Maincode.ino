@@ -57,7 +57,8 @@ void setup() {
 
 void loop() {
   // Retrieve sensor information
-  
+
+  //TO DO
 
   // Print sensor information
 
@@ -65,7 +66,7 @@ void loop() {
 
   // Look for user input
 
-
+  //TO DO 
 
   // Output motor controls
 
@@ -98,15 +99,15 @@ void initialise_sensors(){
 }
 
 void initialise_motors(){
-  
+  //TO DO
 }
 
 void sensor_print(int front, int left, int right){
-  
+  //TO DO
 }
 
 void motor_control(char instruction){
-  
+  //TO DO
 }
 
 
