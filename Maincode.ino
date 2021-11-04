@@ -71,6 +71,8 @@ void loop() {
   // Output motor controls
 
   motor_control(instruction);
+  
+  delay(10);
 
 }
 
