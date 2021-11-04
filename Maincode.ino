@@ -10,8 +10,8 @@
 
 void instructions();
 void initialise_sensors();
-void sensor_information(int *p_front, int *p_left, int *p_right);
 void initialise_motors();
+void sensor_information(int *p_front, int *p_left, int *p_right);
 void sensor_print(int front, int left, int right);
 void motor_control(char instruction);
 
@@ -111,12 +111,33 @@ void initialise_sensors(){
   pinMode(rightEcho, INPUT); // Sets the right echoPin as an INPUT
 }
 
-void sensor_information(int *p_front, int *p_left, int *p_right){
-  
-}
-
 void initialise_motors(){
   //TO DO MARTIN: initialise motor pins
+}
+
+void sensor_information(int *p_front, int *p_left, int *p_right){
+    // Clears the trigPin condition
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Reads the echoPin
+  duration1 = pulseIn(frontEcho, HIGH);
+  duration2 = pulseIn(leftEcho, HIGH);
+  duration2 = pulseIn(rightEcho, HIGH);
+  // Calculating the distance
+  *p_front = duration1 * 0.034 / 2;
+  *p_left = duration2 * 0.034 / 2;
+  *p_right = duration3 * 0.034 / 2;
+
+  //resetting all the pins
+  duration1 = pulseIn(frontEcho, LOW);
+  duration2 = pulseIn(leftEcho, LOW);
+  duration2 = pulseIn(rightEcho, LOW);
 }
 
 void sensor_print(int front, int left, int right){
