@@ -57,9 +57,7 @@ void setup() {
 }
 
 void loop() {
-  // Retrieve sensor information
-
-  //TO DO RAY: get sensor information and store distance(cm) as front,left,right
+  // Retrieve sensor information, store as front,left,right(cm)
   int front;
   int left;
   int right;
