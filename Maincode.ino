@@ -10,6 +10,7 @@
 
 void instructions();
 void initialise_sensors();
+void sensor_information(int *p_front, int *p_left, int *p_right);
 void initialise_motors();
 void sensor_print(int front, int left, int right);
 void motor_control(char instruction);
@@ -59,6 +60,16 @@ void loop() {
   // Retrieve sensor information
 
   //TO DO RAY: get sensor information and store distance(cm) as front,left,right
+  int front;
+  int left;
+  int right;
+
+  int *p_front = &front;
+  int *p_left = &left;
+  int *p_right = &right;
+
+  sensor_information(p_front, p_left, p_right);
+
 
   // Print sensor information
 
@@ -98,6 +109,10 @@ void initialise_sensors(){
   pinMode(frontEcho, INPUT); // Sets the front echoPin as an INPUT
   pinMode(leftEcho, INPUT); // Sets the left echoPin as an INPUT
   pinMode(rightEcho, INPUT); // Sets the right echoPin as an INPUT
+}
+
+void sensor_information(int *p_front, int *p_left, int *p_right){
+  
 }
 
 void initialise_motors(){
