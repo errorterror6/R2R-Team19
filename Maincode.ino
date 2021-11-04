@@ -29,6 +29,8 @@ void setup() {
     int i = 0;
     delay(10);
   }
+  
+  int incomingByte;
 
   if (Serial.available() > 0) {
         incomingByte = Serial.read();
@@ -75,7 +77,7 @@ void loop() {
 
   // Look for user input
 
-  //TO DO ALEX: write code to receive user input.
+  //TO DO ALEX: write code to receive user input. output as char instruction. should expect WASDQE 012345. else, return no instruction.
 
   // Output motor controls
 
