@@ -17,7 +17,7 @@ void motor_control(char instruction);
 
 
 void setup() {
-  Serial.begin(9600)                  //begin Serial Communication
+  Serial.begin(9600);                  //begin Serial Communication
   // UI Features, e.g. instructions
 
   Serial.println("-------------------------------------");
